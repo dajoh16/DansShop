@@ -30,5 +30,9 @@ router.delete('/delete/:id', function(req, res, next) {
     res.status(200).send();
 });
 
+router.post('/reset', function (req,res,next) {
+    db = {}
+    res.status(200).send();
+});
 
 module.exports = router;
