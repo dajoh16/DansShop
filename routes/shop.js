@@ -9,6 +9,10 @@ router.get('/get/:id', function(req, res, next) {
     res.status(200).json(db[req.params.id]);
 });
 
+router.get('/health', function(req,res,next) {
+    res.status(200).send("healthy");
+})
+
 router.post('/create/item', function(req, res, next) {
     counter++;
     var body = req.body;
