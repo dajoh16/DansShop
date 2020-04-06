@@ -36,6 +36,7 @@ router.delete('/delete/:id', function(req, res, next) {
 
 router.post('/reset', function (req,res,next) {
     db = {}
+    counter = -1
     res.status(200).send();
 });
 
