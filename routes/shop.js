@@ -5,12 +5,13 @@ var db = {};
 var counter = -1;
 
 
-/**
- router.get('/get/:id', function(req, res, next) {
-     res.status(200).json(db[req.params.id]);
- });
- */
 
+router.get('/get/:id', function(req, res, next) {
+    res.status(200).json(db[req.params.id]);
+});
+ 
+
+ /*
 router.get('/get/:id', function(req, res, next) {
     if (req.params.id === "1"){
         res.status(200).json(db["0"]);
@@ -18,6 +19,7 @@ router.get('/get/:id', function(req, res, next) {
         res.status(200).json(db[req.params.id]);
     }
 });
+*/
 
 router.get('/health', function(req,res,next) {
     res.status(200).send("healthy");
