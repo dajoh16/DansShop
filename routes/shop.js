@@ -42,7 +42,8 @@ router.patch('/update/:id', function(req, res, next) {
 });
 
 router.delete('/delete/:id', function(req, res, next) {
-    if (delete db[req.params.id]) {
+    if (db[req.params.id] !== undefined) {
+        delete db[req.params.id]
         res.status(200).send();
     } else {
         res.status(404).send();
