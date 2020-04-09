@@ -36,7 +36,7 @@ router.post('/create/item', function(req, res, next) {
 
 router.put('/update/:id', function(req, res, next) {
     var body = req.body;
-    body.id = req.params.id;
+    body.id = parseInt(req.params.id);
     db[req.params.id] = body;
     res.status(200).json(db[req.params.id]);
 });
